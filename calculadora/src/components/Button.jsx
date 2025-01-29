@@ -1,17 +1,21 @@
-import React from 'react'
-import './Button.css'
+import React from 'react';
+import './Button.css';
 
-export default props => {
-    let classes = 'button '
-    classes += props.operation ? 'operation' : ''
-    classes += props.double ? 'double' : ''
-    classes += props.triple ? 'triple' : ''
-    
+const Button = ({ label, click, operation, double, triple }) => {
+    const classes = `
+        button 
+        ${operation ? 'operation' : ''} 
+        ${double ? 'double' : ''} 
+        ${triple ? 'triple' : ''}
+    `.trim();
+
     return (
         <button 
-            onClick={e => props.click && props.click(props.label)}
+            onClick={e => click && click(label)}
             className={classes}>
-            {props.label}
+            {label}
         </button>
-    )
-}
+    );
+};
+
+export default Button;
