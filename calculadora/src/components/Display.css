@@ -10,4 +10,5 @@
     overflow-x: auto; /* Permite rolagem horizontal */
     overflow-y: hidden; /* Esconde a rolagem vertical */
     white-space: nowrap; /* Impede a quebra de linha */
+   
 }
